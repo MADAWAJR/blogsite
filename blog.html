@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Rotich - Web Developer & USSD Creator</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-image: url('https://res.cloudinary.com/dhvwpn5bo/image/upload/v1730208295/c769c9db0be617a3a052ed212bede360_nbybmw.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    overflow-x: hidden;
+}
+        }
+
+        
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            margin-bottom: 10px;
+        }
+
+        header h1 {
+    color: white; /* Red color */
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); /* Optional shadow for emphasis */
+    
+}
+            
+        
+
+        nav {
+            background-color: #blue;
+            padding: 30px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: blue;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            margin-top: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: violet;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+.project-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project {
+    background-color: yellow;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.project h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.project p {
+    font-size: 0.95em;
+    color: #555;
+}
+
+.view-project-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #4a90e2;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.view-project-button:hover {
+    background-color: #357ABD;
+}
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: blue;
+            color: #fff;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.2em;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        #scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        #scroll-to-top:hover {
+            background-color: pink;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form input,
+        form textarea,
+        form button {
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+        #tech-quotes {
+    background-color: #f0f8ff;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+#tech-quotes h2 {
+    text-align: center;
+    color: #4a90e2;
+}
+
+.quote {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-left: 5px solid #4a90e2;
+    font-style: italic;
+}
+
+.quote-sayer {
+    font-weight: bold;
+}
+.whatsapp-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #25D366;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #20b259;
+}
+
+    /* Additional styles for your requirements */
+
+    /* Make the Fullstack Developer & USSD Application Creator text green */
+    .sub-heading {
+        color: green;
+        font-weight: bold;
+    }
+
+    /* Style the social media links as buttons */
+    .social-button {
+        display: inline-block;
+        padding: 2px 5px;
+        background-color: #333;
+        color: #red;
+        border-radius: 5px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        margin: 5px;
+    }
+
+    .social-button:hover {
+        background-color: red;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <header>
+            <div class="header-content">
+                <img src="https://res.cloudinary.com/dhvwpn5bo/image/upload/v1730197090/altvdv_tedjxn.jpg" alt="Profile Picture" class="profile-image">
+                <div>
+                    <h1>Victor Rotich</h1>
+                    <p>Fullstack Developer & USSD Application Creator</p>
+                </div>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#tech-quotes">Tech Insights</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main>
+           <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I’m Victor Rotich, a Fullstack developer and USSD creator with a knack for turning creative ideas into digital realities.  I'm driven by a passion for technology and innovation, especially when it comes to helping businesses and individuals harness the power of the web.</p>
+    <p>Whether it's a sleek, responsive website or a customized USSD solution, I strive to build digital tools that solve real-world problems and add value. I believe in the power of technology to connect, inspire, and make life a little easier for everyone. Coding for me is more than a skill; it’s a craft, and I’m dedicated to honing it every day.</p>
+    <p>When I’m not coding, you’ll likely find me exploring new tech trends, brainstorming my next project, or connecting with fellow creators who share my love for innovation. I’m here to create solutions that don't just work but also make a difference.</p>
+</section>
+
+           <section id="skills">
+    <h2>Skills</h2>
+    <p>With a versatile toolkit, I specialize in crafting seamless, efficient digital solutions. Here’s a look at some of the skills I bring to the table:</p>
+    <ul>
+        <li><strong>HTML5 & CSS3:</strong> Building clean, responsive, and accessible web pages.</li>
+        <li><strong>JavaScript & React:</strong> Creating dynamic, interactive user interfaces with modern frameworks.</li>
+        <li><strong>Node.js & Express:</strong> Developing fast and scalable server-side applications.</li>
+        <li><strong>USSD Development:</strong> Crafting effective USSD applications tailored for businesses.</li>
+        <li><strong>API Integration:</strong> Seamlessly connecting platforms and enhancing functionality.</li>
+        <li><strong>Responsive Design:</strong> Ensuring an optimized user experience on all devices.</li>
+        <li><strong>Version Control (Git):</strong> Managing code efficiently and collaborating effectively.</li>
+        <li><strong>Problem-Solving:</strong> Analyzing challenges and implementing impactful solutions.</li>
+    </ul>
+</section>
+
+            <section id="projects">
+    <h2>Projects</h2>
+    <p>Here’s a selection of projects that showcase my expertise in web and USSD application development:</p>
+    
+    <div class="project-columns">
+        <div class="project">
+            <img src="https://res.cloudinary.com/dhvwpn5bo/image/upload/v1730206048/banner_onk8gn.png" alt="USSD Promo Message Monitor">
+            <h3>USSD Promo Message Monitor</h3>
+            <p>Developed a custom USSD application to streamline promotional message management, empowering businesses with improved engagement tracking.</p>
+            <a href="https://wa.me/254704967186?text=Hello%20Victor%2C%20I%27m%20interested%20in%20your%20USSD%20promo%20message%20monitor%20project." class="view-project-button">View Project</a>
+        </div>
+
+        <div class="project">
+            <img src="https://res.cloudinary.com/dhvwpn5bo/image/upload/v1730206367/artisan-shop-1_tryp1w.jpg" alt="E-commerce Platform">
+            <h3>E-commerce Platform</h3>
+            <p>Built a seamless e-commerce site for artisans to showcase and sell products, helping expand their reach with a polished digital platform.</p>
+            <a href="https://wa.me/254704967186?text=Hello%20Victor%2C%20I%27m%20interested%20in%20your%20E-%20commerce%20project." class="view-project-button">View Project</a>
+        </div>
+
+        <div class="project">
+            <img src="https://res.cloudinary.com/dhvwpn5bo/image/upload/v1730206862/online-ordering-system-conversion-box-1_tldkoo.png" alt="Restaurant Ordering System">
+            <h3>Restaurant Ordering System</h3>
+            <p>Developed a USSD-based ordering solution, enabling efficient order placements for local eateries and enhancing customer convenience.</p>
+            <a href="https://wa.me/254704967186?text=Hello%20Victor%2C%20I%27m%20interested%20in%20your%20services." target="_blank" class="view-project-button" class="view-project-button">View Project</a>
+        </div>
+
+       
+
+        <div class="project">
+            <img src="https://res.cloudinary.com/dhvwpn5bo/image/upload/v1730204364/maxresdefault_tvgvlg.jpg" alt="Job Application Tracker">
+            <h3>Job Application Tracker</h3>
+            <p>Designed an app to help job seekers manage applications, track deadlines, and organize interview prep in one convenient location.</p>
+            
+           
+    <a href="https://wa.me/254704967186?text=Hello%20Victor%2C%20I%27m%20interested%20in%20your%20job%20application%20tracker%20project." class="view-project-button" target="_blank">View project</a>
+</div>
+            
+        </div>
+
+        <div class="project">
+            <img src="https://res.cloudinary.com/dhvwpn5bo/image/upload/v1730204547/original-af34380af4823ea9da1a4cc1c0c24684_qlukdy.png" alt="Weather Forecast App">
+            <h3>Weather Forecast App</h3>
+            <p>Built a responsive weather app that delivers real-time forecasts and notifications for users worldwide with a user-friendly UI.</p>
+            <a href="https://wa.me/254704967186?text=Hello%20Victor%2C%20I%27m%20interested%20in%20your%20weather%20forecast%20project." class="view-project-button">View Project</a>
+        </div>
+
+        <div class="project">
+            <img src="https://res.cloudinary.com/dhvwpn5bo/image/upload/v1730204799/maxresdefault_woyqyy.jpg" alt="Expense Tracker">
+            <h3>Expense Tracker</h3>
+            <p>Developed an expense tracking app that helps users manage their finances by categorizing spending and generating monthly reports.</p>
+            <a href="https://wa.me/254704967186?text=Hello%20Victor%2C%20I%27m%20interested%20in%20your%20expense%20tracker%20project." class="view-project-button">View Project</a>
+        </div>
+
+        <div class="project">
+            <img src="https://res.cloudinary.com/dhvwpn5bo/image/upload/v1730205743/original-00e77c6efdd308517799952eb6439c60_smjtrt.png" alt="Inventory Management System">
+            <h3>Inventory Management System</h3>
+            <p>Created a comprehensive inventory management system for small businesses, streamlining stock control and sales tracking.</p>
+            <a href="https://wa.me/254704967186?text=Hello%20Victor%2C%20I%27m%20interested%20in%20your%20inventory%20management%20system%20project." class="view-project-button">View Project</a>
+        </div>
+
+       
+
+        <div class="project">
+            <img src="https://res.cloudinary.com/dhvwpn5bo/image/upload/v1730205506/IMG-20241029-WA0056_lyi7qu.jpg" alt="Personal Blog Site">
+            <h3>Personal Blog Site</h3>
+            <p>Developed a personal blog with a customizable layout, enabling writers to share their thoughts and build an online audience.</p>
+            <a href="https://wa.me/254704967186?text=Hello%20Victor%2C%20I%27m%20interested%20in%20your%20personal%20blog%20site%20project." class="view-project-button">View Project</a>
+        </div>
+    </div>
+</section>
+            <section id="tech-quotes">
+               
+    <h2>Tech Insights</h2>
+    <div class="quote">"The best way to predict the future is to invent it." - Alan Kay</div>
+    <div class="quote">"Technology is best when it brings people together." - Matt Mullenweg</div>
+    <div class="quote">"It has become appallingly obvious that our technology has exceeded our humanity." - Albert Einstein</div>
+    <div class="quote">"The science of today is the technology of tomorrow." - Edward Teller</div>
+</section>
+            
+
+            <section id="contact">
+    <h2>Contact Me</h2>
+    <p>If you have any questions or would like to get in touch, feel free to send me a message on WhatsApp!</p>
+    <a href="https://wa.me/254704967186?text=Hello%20Victor%2C%20I%27m%20interested%20in%20your%20services." target="_blank" class="whatsapp-button">Message Me on WhatsApp</a>
+</section>
+        </main>
+<footer>
+    <p>Connect with me on social media</p>
+    <div class="social-links">
+        <a href="https://twitter.com/username" target="_blank" class="social-button">Twitter</a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-button">LinkedIn</a>
+        <a href="https://github.com/yourusername" target="_blank" class="social-button">GitHub</a>
+        <a href="https://facebook.com/yourusername" target="_blank" class="social-button">Facebook</a>
+      
+    </div>
+</footer>
+
+    <script>
+        const scrollToTopButton = document.getElementById('scroll-to-top');
+        window.onscroll = () => {
+            scrollToTopButton.style.display = document.documentElement.scrollTop > 100 ? "block" : "none";
+        };
+
+        scrollToTopButton.onclick = () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        document.getElementById('contact-form').onsubmit = function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            alert("Thank you for your message, " + name + "!");
+            this.reset();
+        };
+    </script>
+</body>
+</html>
